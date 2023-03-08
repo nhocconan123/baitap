@@ -19,7 +19,7 @@ public class kythuat extends  NhanVien{
 
     @Override
     public String moTaCongViec() {
-        return "sua chuong trinh";
+        return "code";
     }
 
     @Override
