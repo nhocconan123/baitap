@@ -10,7 +10,7 @@ public class main {
         VanBan vb=new VanBan(noidung);
         System.out.println("so tu cua chuoi la: ");
         vb.demsoluongchu();
-        System.out.println(" chuan hoa xau khong co ky tu trang o giau xau");
+        System.out.println(" chuan hoa xau khong co ky tu trang");
         vb.chuanhoaxau();
         System.out.println("chuan hoa van ban thanh chu viet hoa");
         vb.hoaToUpperCase();
