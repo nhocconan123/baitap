@@ -1,7 +1,9 @@
 package bai3;
-import java.io.*;
-import java.util.*;
+
 public class VanBan {
+    public static final char SPACE = ' ';
+    public static final char TAB = '\t';
+    public static final char BREAK_LINE = '\n';
     private String noidung;
 
     public VanBan() {
@@ -19,9 +21,9 @@ public class VanBan {
         this.noidung = noidung;
     }
 
-    public int demsoluongchu()
+    public void demsoluongchu()
     {
-        return noidung.length();
+        System.out.println(countWords(noidung));
     }
     public void hoaToUpperCase()
     {
@@ -48,5 +50,24 @@ public class VanBan {
         System.out.println(noidung);
     }
 
-
+    public static int countWords(String input) {
+        if (input == null) {
+            return -1;
+        }
+        int count = 0;
+        int size = input.length();
+        boolean notCounted = true;
+        for (int i = 0; i < size; i++) {
+            if (input.charAt(i) != SPACE && input.charAt(i) != TAB
+                    && input.charAt(i) != BREAK_LINE) {
+                if(notCounted) {
+                    count++;
+                    notCounted = false;
+                }
+            } else {
+                notCounted = true;
+            }
+        }
+        return count;
+    }
 }
